@@ -1,0 +1,62 @@
+[
+  {
+    "Id": 1,
+    "title": "The Psychology of First Impressions",
+    "content": "First impressions form within milliseconds of meeting someone new. Research shows that people make judgments about trustworthiness, competence, and likability in just 100 milliseconds. These rapid assessments are based on facial features, body language, and initial interactions.\n\nThe primacy effect explains why first impressions are so powerful - information received first carries more weight than information received later. This cognitive bias evolved as a survival mechanism, helping our ancestors quickly assess potential threats or allies.\n\nTo make positive first impressions: maintain eye contact, offer a genuine smile, use confident body language, dress appropriately for the context, and show genuine interest in others. Remember, you only get one chance to make a first impression, but you have many opportunities to reinforce or gradually change someone's perception of you.",
+    "category": "Psychology",
+    "duration": 180,
+    "difficulty": 2,
+    "tags": ["social psychology", "first impressions", "cognitive bias"],
+    "completedAt": null
+  },
+  {
+    "Id": 2,
+    "title": "Understanding API Rate Limiting",
+    "content": "API rate limiting is a crucial technique for controlling the number of requests a client can make to an API within a specific time window. It protects servers from being overwhelmed by too many requests and ensures fair usage among all users.\n\nCommon rate limiting strategies include: Token Bucket (allows bursts but maintains average rate), Fixed Window (simple but can cause traffic spikes), Sliding Window (more accurate but complex), and Leaky Bucket (smooths out request spikes).\n\nWhen implementing rate limiting, consider factors like user tiers (premium users get higher limits), different limits for different endpoints, and graceful degradation. Always return appropriate HTTP status codes (429 Too Many Requests) and include headers indicating remaining requests and reset time.\n\nFor handling rate limits as a client, implement exponential backoff, respect retry-after headers, and consider request queuing for non-critical operations.",
+    "category": "Technology",
+    "duration": 180,
+    "difficulty": 3,
+    "tags": ["API", "rate limiting", "backend", "scalability"],
+    "completedAt": "2024-01-15T10:30:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "The Pomodoro Technique Explained",
+    "content": "The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. It breaks work into 25-minute focused intervals called 'pomodoros,' separated by short 5-minute breaks. After four pomodoros, take a longer 15-30 minute break.\n\nThe technique works because it leverages the brain's natural attention cycles and creates urgency through time constraints. The frequent breaks prevent mental fatigue and maintain high levels of concentration throughout the day.\n\nTo implement the Pomodoro Technique: choose a task, set a timer for 25 minutes, work with complete focus until the timer rings, take a 5-minute break, and repeat. Track your pomodoros to identify patterns in your productivity and adjust your schedule accordingly.\n\nBenefits include improved focus, reduced mental fatigue, better time estimation skills, and decreased procrastination. The key is maintaining the discipline to truly disconnect during breaks and resist the urge to continue working when the timer rings.",
+    "category": "Productivity",
+    "duration": 180,
+    "difficulty": 1,
+    "tags": ["time management", "focus", "productivity", "technique"],
+    "completedAt": null
+  },
+  {
+    "Id": 4,
+    "title": "Cognitive Load Theory in Learning",
+    "content": "Cognitive Load Theory, developed by John Sweller, explains how the human brain processes information during learning. It identifies three types of cognitive load: intrinsic (inherent difficulty of the material), extraneous (how information is presented), and germane (processing and schema construction).\n\nThe working memory can only handle 7±2 pieces of information simultaneously. When cognitive load exceeds this capacity, learning effectiveness decreases dramatically. This is why complex topics should be broken into smaller, digestible chunks.\n\nTo optimize learning, reduce extraneous load through clear presentation, manage intrinsic load by sequencing from simple to complex, and promote germane load through practice and reflection. Examples include using visual aids to supplement verbal instructions, eliminating redundant information, and providing worked examples before independent practice.\n\nUnderstanding cognitive load helps both learners and educators design more effective learning experiences that align with how the brain naturally processes and retains information.",
+    "category": "Psychology",
+    "duration": 180,
+    "difficulty": 3,
+    "tags": ["cognitive science", "learning", "memory", "education"],
+    "completedAt": null
+  },
+  {
+    "Id": 5,
+    "title": "Microservices Architecture Fundamentals",
+    "content": "Microservices architecture decomposes applications into small, independent services that communicate over well-defined APIs. Each service is owned by a small team and can be developed, deployed, and scaled independently.\n\nKey characteristics include business-focused services, decentralized governance, failure isolation, and technology diversity. Services communicate through lightweight protocols like HTTP/REST or messaging queues, avoiding shared databases or in-process communication.\n\nBenefits include improved scalability, faster development cycles, technology flexibility, and better fault isolation. However, microservices introduce complexity in service discovery, distributed data management, network latency, and testing.\n\nBest practices include starting with a monolith and splitting strategically, designing for failure with circuit breakers and timeouts, implementing comprehensive monitoring, and maintaining service contracts. Consider using containerization and orchestration platforms like Docker and Kubernetes for deployment and management.",
+    "category": "Technology",
+    "duration": 180,
+    "difficulty": 4,
+    "tags": ["architecture", "microservices", "scalability", "distributed systems"],
+    "completedAt": null
+  },
+  {
+    "Id": 6,
+    "title": "Getting Things Done (GTD) Method",
+    "content": "Getting Things Done (GTD) is a productivity methodology created by David Allen that focuses on capturing all tasks and ideas in an external system, freeing your mind to focus on execution rather than remembering.\n\nThe GTD workflow consists of five steps: Capture (collect everything in trusted inboxes), Clarify (process what each item means and what action is required), Organize (sort items into appropriate lists and folders), Reflect (review your system regularly), and Engage (choose and execute actions with confidence).\n\nKey GTD concepts include the two-minute rule (if something takes less than two minutes, do it immediately), context-based action lists (@calls, @computer, @errands), and the weekly review to keep your system current and your mind clear.\n\nGTD works because it reduces decision fatigue, eliminates the mental burden of remembering tasks, and provides a systematic approach to managing commitments. The system requires initial setup time but pays dividends in reduced stress and increased productivity.",
+    "category": "Productivity",
+    "duration": 180,
+    "difficulty": 2,
+    "tags": ["productivity", "organization", "GTD", "time management"],
+    "completedAt": null
+  }
+]

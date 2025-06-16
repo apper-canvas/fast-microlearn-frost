@@ -1,0 +1,12 @@
+{
+  "Id": 1,
+  "streak": 7,
+  "totalLessons": 12,
+  "categoryScores": {
+    "Psychology": [85, 92, 78, 88],
+    "Technology": [95, 88, 92],
+    "Productivity": [82, 90, 85, 95]
+  },
+  "lastActivity": "2024-01-15T10:45:00Z",
+  "preferredDifficulty": 2.5
+}

@@ -1,0 +1,176 @@
+[
+  {
+    "Id": 1,
+    "lessonId": 1,
+    "questions": [
+      {
+        "Id": 1,
+        "question": "How quickly do people form first impressions?",
+        "options": ["Within 1 second", "Within 100 milliseconds", "Within 5 seconds", "Within 10 seconds"],
+        "correctAnswer": 1,
+        "explanation": "Research shows first impressions form within just 100 milliseconds of meeting someone."
+      },
+      {
+        "Id": 2,
+        "question": "What psychological principle explains why first impressions are so powerful?",
+        "options": ["Recency effect", "Primacy effect", "Confirmation bias", "Halo effect"],
+        "correctAnswer": 1,
+        "explanation": "The primacy effect means information received first carries more weight than information received later."
+      },
+      {
+        "Id": 3,
+        "question": "Which factor is NOT mentioned as important for making positive first impressions?",
+        "options": ["Eye contact", "Expensive clothing", "Genuine smile", "Confident body language"],
+        "correctAnswer": 1,
+        "explanation": "Appropriate dress for the context is mentioned, but expensive clothing specifically is not required."
+      }
+    ],
+    "score": null,
+    "completedAt": null
+  },
+  {
+    "Id": 2,
+    "lessonId": 2,
+    "questions": [
+      {
+        "Id": 1,
+        "question": "What HTTP status code should be returned when rate limits are exceeded?",
+        "options": ["400 Bad Request", "429 Too Many Requests", "503 Service Unavailable", "401 Unauthorized"],
+        "correctAnswer": 1,
+        "explanation": "429 Too Many Requests is the standard HTTP status code for rate limiting violations."
+      },
+      {
+        "Id": 2,
+        "question": "Which rate limiting strategy allows for burst traffic while maintaining average rates?",
+        "options": ["Fixed Window", "Token Bucket", "Leaky Bucket", "Sliding Window"],
+        "correctAnswer": 1,
+        "explanation": "Token Bucket allows bursts when tokens are available but maintains an average rate over time."
+      },
+      {
+        "Id": 3,
+        "question": "What should clients implement when handling rate limits?",
+        "options": ["Ignore retry-after headers", "Use linear backoff", "Implement exponential backoff", "Send requests faster"],
+        "correctAnswer": 2,
+        "explanation": "Exponential backoff helps prevent overwhelming the server and improves the chances of successful retries."
+      }
+    ],
+    "score": 100,
+    "completedAt": "2024-01-15T10:45:00Z"
+  },
+  {
+    "Id": 3,
+    "lessonId": 3,
+    "questions": [
+      {
+        "Id": 1,
+        "question": "How long is each pomodoro work interval?",
+        "options": ["20 minutes", "25 minutes", "30 minutes", "45 minutes"],
+        "correctAnswer": 1,
+        "explanation": "The Pomodoro Technique uses 25-minute focused work intervals called pomodoros."
+      },
+      {
+        "Id": 2,
+        "question": "How long should the break be after completing four pomodoros?",
+        "options": ["5 minutes", "10 minutes", "15-30 minutes", "1 hour"],
+        "correctAnswer": 2,
+        "explanation": "After four pomodoros, you should take a longer break of 15-30 minutes."
+      },
+      {
+        "Id": 3,
+        "question": "Who developed the Pomodoro Technique?",
+        "options": ["David Allen", "Francesco Cirillo", "John Sweller", "Stephen Covey"],
+        "correctAnswer": 1,
+        "explanation": "Francesco Cirillo developed the Pomodoro Technique in the late 1980s."
+      }
+    ],
+    "score": null,
+    "completedAt": null
+  },
+  {
+    "Id": 4,
+    "lessonId": 4,
+    "questions": [
+      {
+        "Id": 1,
+        "question": "How many pieces of information can working memory handle simultaneously?",
+        "options": ["5±2", "7±2", "9±2", "12±2"],
+        "correctAnswer": 1,
+        "explanation": "Working memory can typically handle 7±2 pieces of information at once, known as Miller's rule."
+      },
+      {
+        "Id": 2,
+        "question": "Which type of cognitive load involves processing and schema construction?",
+        "options": ["Intrinsic load", "Extraneous load", "Germane load", "Working load"],
+        "correctAnswer": 2,
+        "explanation": "Germane load refers to the processing and construction of mental schemas during learning."
+      },
+      {
+        "Id": 3,
+        "question": "Who developed Cognitive Load Theory?",
+        "options": ["John Sweller", "Francesco Cirillo", "David Allen", "Albert Bandura"],
+        "correctAnswer": 0,
+        "explanation": "John Sweller developed Cognitive Load Theory to explain how the brain processes information during learning."
+      }
+    ],
+    "score": null,
+    "completedAt": null
+  },
+  {
+    "Id": 5,
+    "lessonId": 5,
+    "questions": [
+      {
+        "Id": 1,
+        "question": "What is a key characteristic of microservices architecture?",
+        "options": ["Shared databases", "Monolithic deployment", "Independent services", "Tight coupling"],
+        "correctAnswer": 2,
+        "explanation": "Microservices are small, independent services that can be developed, deployed, and scaled independently."
+      },
+      {
+        "Id": 2,
+        "question": "How do microservices typically communicate?",
+        "options": ["Shared memory", "Direct database access", "Lightweight protocols like HTTP", "File sharing"],
+        "correctAnswer": 2,
+        "explanation": "Microservices communicate through lightweight protocols like HTTP/REST or messaging queues."
+      },
+      {
+        "Id": 3,
+        "question": "What is a recommended approach when transitioning to microservices?",
+        "options": ["Start with microservices", "Rewrite everything at once", "Start with monolith and split strategically", "Use only one technology"],
+        "correctAnswer": 2,
+        "explanation": "It's recommended to start with a monolith and then split it strategically based on business domains and team boundaries."
+      }
+    ],
+    "score": null,
+    "completedAt": null
+  },
+  {
+    "Id": 6,
+    "lessonId": 6,
+    "questions": [
+      {
+        "Id": 1,
+        "question": "What is the two-minute rule in GTD?",
+        "options": ["Take a 2-minute break every hour", "If something takes less than 2 minutes, do it immediately", "Review your system every 2 minutes", "Spend 2 minutes planning each task"],
+        "correctAnswer": 1,
+        "explanation": "The two-minute rule states that if an action takes less than two minutes to complete, you should do it immediately rather than adding it to a list."
+      },
+      {
+        "Id": 2,
+        "question": "How many main steps are in the GTD workflow?",
+        "options": ["3", "4", "5", "6"],
+        "correctAnswer": 2,
+        "explanation": "The GTD workflow has five steps: Capture, Clarify, Organize, Reflect, and Engage."
+      },
+      {
+        "Id": 3,
+        "question": "What does the '@' symbol represent in GTD context lists?",
+        "options": ["Priority level", "Due date", "Context or location", "Person responsible"],
+        "correctAnswer": 2,
+        "explanation": "The '@' symbol in GTD represents context-based lists like @calls, @computer, or @errands, indicating where or how tasks can be completed."
+      }
+    ],
+    "score": null,
+    "completedAt": null
+  }
+]
