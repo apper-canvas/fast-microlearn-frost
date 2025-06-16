@@ -4,15 +4,18 @@ import { toast } from 'react-toastify'
 import { userProgressService, quizService, lessonService } from '@/services'
 import ProgressRing from '@/components/atoms/ProgressRing'
 import StreakDisplay from '@/components/molecules/StreakDisplay'
+import WeeklyReportCard from '@/components/molecules/WeeklyReportCard'
 import ApperIcon from '@/components/ApperIcon'
 
 const Progress = () => {
-  const [userProgress, setUserProgress] = useState(null)
+const [userProgress, setUserProgress] = useState(null)
   const [quizResults, setQuizResults] = useState([])
   const [completedLessons, setCompletedLessons] = useState([])
+  const [weeklyStats, setWeeklyStats] = useState(null)
+  const [weeklyQuizResults, setWeeklyQuizResults] = useState([])
+  const [weeklyLessons, setWeeklyLessons] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
-
   useEffect(() => {
     loadProgressData()
   }, [])
@@ -21,16 +24,30 @@ const Progress = () => {
     setLoading(true)
     setError(null)
     
-    try {
-      const [progressData, quizData, lessonsData] = await Promise.all([
+try {
+      const [
+        progressData, 
+        quizData, 
+        lessonsData, 
+        weeklyStatsData, 
+        weeklyQuizData, 
+        weeklyLessonsData
+      ] = await Promise.all([
         userProgressService.getProgress(),
         quizService.getUserQuizResults(),
-        lessonService.getCompletedLessons()
+        lessonService.getCompletedLessons(),
+        userProgressService.getWeeklyStats(),
+        quizService.getWeeklyQuizResults(),
+        lessonService.getWeeklyCompletedLessons()
       ])
       
       setUserProgress(progressData)
       setQuizResults(quizData)
+setQuizResults(quizData)
       setCompletedLessons(lessonsData)
+      setWeeklyStats(weeklyStatsData)
+      setWeeklyQuizResults(weeklyQuizData)
+      setWeeklyLessons(weeklyLessonsData)
     } catch (err) {
       setError(err.message || 'Failed to load progress data')
       toast.error('Failed to load progress data')
@@ -237,7 +254,15 @@ const Progress = () => {
               7 lessons per week
             </p>
           </div>
-        </motion.div>
+</motion.div>
+
+        {/* Weekly Report Card */}
+        <WeeklyReportCard 
+          weeklyStats={weeklyStats}
+          weeklyQuizResults={weeklyQuizResults}
+          weeklyLessons={weeklyLessons}
+          className="mb-8"
+        />
 
         {/* Detailed Analytics */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

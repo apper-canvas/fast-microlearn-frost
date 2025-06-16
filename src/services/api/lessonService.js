@@ -64,8 +64,22 @@ class LessonService {
       lesson.title.toLowerCase().includes(searchTerm) ||
       lesson.content.toLowerCase().includes(searchTerm) ||
       lesson.tags.some(tag => tag.toLowerCase().includes(searchTerm))
-    );
+);
     return [...filtered];
+  }
+
+  async getWeeklyCompletedLessons() {
+    await delay(300);
+    const now = new Date();
+    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    
+    const weeklyCompleted = this.lessons.filter(lesson => {
+      if (!lesson.completedAt) return false;
+      const completedDate = new Date(lesson.completedAt);
+      return completedDate >= weekAgo && completedDate <= now;
+    });
+    
+    return [...weeklyCompleted];
   }
 }
 

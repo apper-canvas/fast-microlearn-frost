@@ -69,8 +69,39 @@ class UserProgressService {
     } else if (performance < 60 && this.userProgress.preferredDifficulty > 1) {
       this.userProgress.preferredDifficulty -= 0.5;
     }
+return { ...this.userProgress };
+  }
+
+  async getWeeklyStats() {
+    await delay(300);
+    const now = new Date();
+    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     
-    return { ...this.userProgress };
+    // Calculate weekly lessons completed (simulated based on recent activity)
+    const weeklyLessons = Math.min(this.userProgress.totalLessons, 5);
+    
+    // Calculate weekly quiz average from category scores
+    const allScores = Object.values(this.userProgress.categoryScores || {}).flat();
+    const recentScores = allScores.slice(-6); // Last 6 quizzes as weekly sample
+    const weeklyQuizAverage = recentScores.length > 0 
+      ? Math.round(recentScores.reduce((sum, score) => sum + score, 0) / recentScores.length)
+      : 0;
+    
+    // Topics mastered (categories with average > 85%)
+    const topicsMastered = Object.entries(this.userProgress.categoryScores || {})
+      .filter(([category, scores]) => {
+        const avg = scores.reduce((sum, score) => sum + score, 0) / scores.length;
+        return avg >= 85;
+      }).length;
+    
+    return {
+      weeklyLessonsCompleted: weeklyLessons,
+      weeklyQuizAverage,
+      topicsMastered,
+      currentStreak: this.userProgress.streak,
+      weeklyGoalProgress: Math.min((weeklyLessons / 7) * 100, 100),
+      totalLessons: this.userProgress.totalLessons
+    };
   }
 }
 

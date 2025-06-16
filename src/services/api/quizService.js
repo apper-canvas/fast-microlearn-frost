@@ -67,8 +67,22 @@ class QuizService {
 
   async getUserQuizResults() {
     await delay(300);
-    const completed = this.quizzes.filter(quiz => quiz.completedAt);
+const completed = this.quizzes.filter(quiz => quiz.completedAt);
     return [...completed];
+  }
+
+  async getWeeklyQuizResults() {
+    await delay(300);
+    const now = new Date();
+    const weekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    
+    const weeklyCompleted = this.quizzes.filter(quiz => {
+      if (!quiz.completedAt) return false;
+      const completedDate = new Date(quiz.completedAt);
+      return completedDate >= weekAgo && completedDate <= now;
+    });
+    
+    return [...weeklyCompleted];
   }
 }
 
